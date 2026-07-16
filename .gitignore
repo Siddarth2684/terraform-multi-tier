@@ -1,0 +1,27 @@
+# Terraform state files — NEVER push these, contain sensitive data
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+
+# Terraform backend config if it has credentials
+.terraform/
+.terraform.lock.hcl
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Variable files that may contain secrets
+*.tfvars
+*.tfvars.json
+!example.tfvars
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# OS files
+.DS_Store
+Thumbs.db
