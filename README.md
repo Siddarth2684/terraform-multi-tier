@@ -28,8 +28,48 @@ The infrastructure follows Infrastructure as Code (IaC) best practices and deplo
                         │
                         ▼
                        VPC
-```
 
+
+Version 2.0 - Phase 1: Production Networking
+
+Current VPC
+
+                    Internet
+                        │
+                        ▼
+                 Internet Gateway
+                        │
+         ┌──────────────┴──────────────┐
+         │                             │
+   Public Subnet A               Public Subnet B
+      ALB + EC2                    ALB + EC2
+
+
+Target Architecture
+
+                    Internet
+                        │
+                        ▼
+                 Internet Gateway
+                        │
+         ┌──────────────┴──────────────┐
+         │                             │
+   Public Subnet A               Public Subnet B
+       ALB                        ALB
+         │
+         ▼
+      NAT Gateway
+         │
+────────────────────────────────────────────
+         │
+   Private Route Table
+         │
+   ┌──────────────┴──────────────┐
+   │                             │
+Private Subnet A           Private Subnet B
+     EC2                       EC2
+
+```
 ---
 
 ## Features
@@ -137,4 +177,4 @@ This project demonstrates:
 
 ## Author
 
-Siddarth Y K
+Siddarth Y K  

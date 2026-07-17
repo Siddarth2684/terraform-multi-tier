@@ -13,3 +13,9 @@ variable "vpc_cidr" {
 variable "instance_type" {
   default = "t2.micro"
 }
+
+variable "environment" {
+  description = "Deployment environment"
+  type        = string
+  default     = "dev"
+}

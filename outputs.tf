@@ -11,5 +11,11 @@ output "private_subnets" {
 }
 
 output "alb_dns_name" {
-  value = module.compute.alb_dns_name
+  description = "Application Load Balancer DNS Name"
+  value       = module.alb.alb_dns_name
+}
+
+output "alb_arn" {
+  description = "Application Load Balancer ARN"
+  value       = module.alb.alb_arn
 }
