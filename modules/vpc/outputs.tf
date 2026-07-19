@@ -13,3 +13,4 @@ output "private_subnet_ids" {
 output "availability_zones" {
   value = data.aws_availability_zones.available.names
 }
+

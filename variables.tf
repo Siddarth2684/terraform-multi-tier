@@ -19,3 +19,8 @@ variable "environment" {
   type        = string
   default     = "dev"
 }
+
+variable "notification_email" {
+  description = "Email address for CloudWatch alerts"
+  type        = string
+}

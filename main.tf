@@ -1,6 +1,5 @@
 module "vpc" {
-  source = "./modules/vpc"
-
+  source       = "./modules/vpc"
   project_name = var.project_name
   vpc_cidr     = var.vpc_cidr
 }
@@ -33,4 +32,17 @@ module "compute" {
   instance_profile_name = module.security.instance_profile_name
 
   target_group_arn = module.alb.target_group_arn
+}
+
+
+
+############################################################
+# Cloud Watch monitoring and Alarm
+############################################################
+module "monitoring" {
+  source = "./modules/monitoring"
+
+  project_name           = var.project_name
+  autoscaling_group_name = module.compute.autoscaling_group_name
+  notification_email     = var.notification_email
 }
