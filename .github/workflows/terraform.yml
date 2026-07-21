@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      TF_VAR_notification_email: ${{ secrets.TF_VAR_NOTIFICATION_EMAIL }}
+      TF_VAR_NOTIFICATION_EMAIL: ${{ secrets.TF_VAR_NOTIFICATION_EMAIL }}
 
     defaults:
       run:
