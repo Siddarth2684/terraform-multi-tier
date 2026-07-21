@@ -23,4 +23,5 @@ variable "environment" {
 variable "notification_email" {
   description = "Email address for CloudWatch alerts"
   type        = string
+  default     = "siddarthyk2684@gmail.com"
 }
