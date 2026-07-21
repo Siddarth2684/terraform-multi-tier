@@ -9,3 +9,8 @@ variable "autoscaling_group_name" {
 variable "notification_email" {
   type = string
 }
+
+variable "aws_region" {
+  type = string
+}
+

@@ -43,6 +43,8 @@ module "monitoring" {
   source = "./modules/monitoring"
 
   project_name           = var.project_name
+  aws_region             = var.aws_region
   autoscaling_group_name = module.compute.autoscaling_group_name
-  notification_email     = var.notification_email
+
+  notification_email = var.notification_email
 }

@@ -15,3 +15,12 @@ output "alb_arn" {
 
   value = aws_lb.web.arn
 }
+
+output "alb_name" {
+  value = aws_lb.web.name
+}
+
+output "target_group_name" {
+  value = aws_lb_target_group.web.name
+}
+

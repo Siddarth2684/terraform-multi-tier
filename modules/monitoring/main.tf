@@ -29,7 +29,7 @@ resource "aws_cloudwatch_metric_alarm" "high_cpu" {
   period    = 120
   statistic = "Average"
 
-  threshold = 80
+  threshold = 60
 
   dimensions = {
     AutoScalingGroupName = var.autoscaling_group_name
