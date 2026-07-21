@@ -15,6 +15,9 @@ jobs:
     name: Terraform Validation
     runs-on: ubuntu-latest
 
+    env:
+      TF_VAR_notification_email: ${{ secrets.TF_VAR_notification_email }}
+
     defaults:
       run:
         working-directory: .
