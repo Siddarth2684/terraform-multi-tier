@@ -47,5 +47,14 @@ jobs:
       - name: Terraform Validate
         run: terraform validate
 
+      - name: Verify notification email variable
+  run: |
+    if [ -z "$TF_VAR_notification_email" ]; then
+      echo "❌ TF_VAR_notification_email is NOT set"
+      exit 1
+    else
+      echo "✅ TF_VAR_notification_email is set"
+    fi
+
       - name: Terraform Plan
         run: terraform plan -input=false
