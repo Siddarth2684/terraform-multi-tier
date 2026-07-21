@@ -13,3 +13,9 @@ variable "vpc_cidr" {
 variable "instance_type" {
   default = "t2.micro"
 }
+
+variable "notification_email" {
+  description = "Email address for CloudWatch alerts"
+  type        = string
+  default     = "siddarthyk2684@gmail.com"
+}
