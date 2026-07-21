@@ -49,5 +49,8 @@ jobs:
 
       
       - name: Terraform Plan
-        run: terraform plan -input=false
+        run: |
+        terraform plan \
+        -input=false \
+        -var="notification_email=${{ secrets.TF_VAR_NOTIFICATION_EMAIL }}"
         
