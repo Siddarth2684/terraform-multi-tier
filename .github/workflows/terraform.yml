@@ -51,5 +51,4 @@ jobs:
 
       
       - name: Terraform Plan
-        run: terraform plan -input=false -var="notification_email=${{ secrets.NOTIFICATION_EMAIL }}"
-        
+        run: terraform plan -input=false 
