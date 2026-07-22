@@ -48,3 +48,10 @@ module "monitoring" {
 
   notification_email = var.notification_email
 }
+
+
+module "github_oidc" {
+  source = "./modules/github-oidc"
+
+  project_name = var.project_name
+}
